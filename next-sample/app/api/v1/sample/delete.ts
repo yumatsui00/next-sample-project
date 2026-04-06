@@ -1,20 +1,20 @@
 import type { ApiHandler } from "@/lib/api/types"
 import { logger } from "@/lib/logger/logger"
 
-export const handleGet: ApiHandler = async (ctx) => {
+export const handleDelete: ApiHandler = async (ctx) => {
   logger.info({
-    message: "Sample GET endpoint was called.",
+    message: "Sample DELETE endpoint was called.",
     context: {
       traceId: ctx.traceId,
       path: "/api/v1/sample",
-      method: "GET",
+      method: "DELETE",
     },
   })
 
   return {
     body: {
       ok: true,
-      method: "GET",
+      method: "DELETE",
       traceId: ctx.traceId,
     },
   }
